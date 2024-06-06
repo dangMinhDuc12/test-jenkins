@@ -29,6 +29,7 @@ pipeline {
         script {
           myLibraryFunctions.functionOne("Duc")
           myLibraryFunctions.functionTwo()
+          myLibraryFunctions.testGetBuildCacheSize()
         }
       }
     }
