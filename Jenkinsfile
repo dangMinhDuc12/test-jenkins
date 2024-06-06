@@ -27,7 +27,7 @@ pipeline {
 
       steps {
         script {
-          myLibraryFunctions.functionOne("Duc")
+          functionOne("Duc")
         }
       }
     }
