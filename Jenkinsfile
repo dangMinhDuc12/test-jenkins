@@ -1,4 +1,4 @@
-@Library('groovy-test')
+@Library('groovy-test') _
 
 pipeline {
   agent none
