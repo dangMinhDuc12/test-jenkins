@@ -1,3 +1,5 @@
+@Library('groovy-test')
+
 pipeline {
   agent none
 
@@ -12,6 +14,21 @@ pipeline {
 
       steps {
         sh "echo helloworld"
+      }
+
+      stage('Test Groovy') {
+        agent {
+          node {
+              label 'ai-aws'
+              customWorkspace 'home/duc/code/jenkins_agent/jenkins-test'
+          }
+        }
+
+        steps {
+          script {
+            functionOne("Duc")
+          }
+        }
       }
     }
   }
